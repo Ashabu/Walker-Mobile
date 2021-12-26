@@ -1,11 +1,4 @@
 {
-  "expo": {
-    "name": "walker-mobile",
-    "slug": "walker-mobile",
-    "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
-  },
-  "name": "walker-mobile"
+  "name": "walker",
+  "displayName": "walker"
 }
