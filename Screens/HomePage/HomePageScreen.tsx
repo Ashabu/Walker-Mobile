@@ -1,18 +1,20 @@
 import React from 'react';
 import { 
     View,
-    ScrollView
+    ScrollView,
+    Text,
+    TouchableOpacity,
+    StyleSheet
  } from 'react-native';
-import AuthBgView from '../../Hooks/BgView';
+import AppLayout from '../../Components/AppLayout/AppLayout';
 
 const HomePageScreen = () => {
     return (
-        <AuthBgView>
+        <AppLayout>
             <ScrollView>
-
+                <Text>მთავარი გვერდი</Text>
             </ScrollView>
-            
-        </AuthBgView>
+        </AppLayout>
     );
 };
 

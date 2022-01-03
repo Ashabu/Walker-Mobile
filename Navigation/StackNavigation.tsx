@@ -7,22 +7,35 @@ import AuthScreen from '../Screens/Authorization/AuthScreen';
 import SignInScreen from '../Screens/Authorization/SignInScreen';
 import SignUpScreen from '../Screens/Authorization/SignUpScreen';
 import HomePageScreen from '../Screens/HomePage/HomePageScreen';
+import WalkServiceScreen from '../Screens/WalkService/WalkServiceScreen';
+import WalkAndPlayServiceScreen from '../Screens/WalkAndPlayService/WalkAndPlayServiceScreen';
+import VacineServiceScreen from '../Screens/VacineService/VacineServiceScreen';
+import InsuranceServiceScreen from '../Screens/InsuranceService/InsuranceServiceScreen';
+import ProfileScreen from '../Screens/Profile/ProfileScreen';
+
+
+
 
 
 
 const Stack = createStackNavigator();
 
 const AppStack = () => {
-    const {isAuthenticated} = useContext(AppContext);
-    useEffect(() => {
+    // const {isAuthenticated} = useContext(AppContext);
+    // useEffect(() => {
 
-    }, [isAuthenticated])
+    // }, [isAuthenticated])
     return (
-        !isAuthenticated? 
-        <AuthScreen/>
-        :
+        
         <NavigationContainer  ref = {navigationRef}>
-            <Stack.Navigator initialRouteName='HomePageScreen'>
+            <Stack.Navigator initialRouteName='AuthScreen'>
+            <Stack.Screen
+                    name='AuthScreen'
+                    component={AuthScreen}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
                 <Stack.Screen
                     name='HomePageScreen'
                     component={HomePageScreen}
@@ -51,27 +64,41 @@ const AppStack = () => {
                         headerShown: false,
                     }}
                 />
-                {/* <Stack.Screen
-                    name='UserCardWithBarcode'
-                    component={UserCardWithBarcode}
+                <Stack.Screen
+                    name='WalkServiceScreen'
+                    component={WalkServiceScreen}
                     options={{
                         headerShown: false,
                     }}
                 />
                 <Stack.Screen
-                    name='ShopDetailsScreen'
-                    component={ShopDetailsScreen}
+                    name='WalkAndPlayServiceScreen'
+                    component={WalkAndPlayServiceScreen}
                     options={{
                         headerShown: false,
                     }}
                 />
                 <Stack.Screen
-                    name='OrderGiftCardScreen'
-                    component={OrderGiftCardScreen}
+                    name='VacineServiceScreen'
+                    component={VacineServiceScreen}
                     options={{
                         headerShown: false,
                     }}
-                /> */}
+                />
+                 <Stack.Screen
+                    name='InsuranceServiceScreen'
+                    component={InsuranceServiceScreen}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                 <Stack.Screen
+                    name='ProfileScreen'
+                    component={ProfileScreen}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     );

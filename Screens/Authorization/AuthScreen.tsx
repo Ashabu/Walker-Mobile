@@ -9,8 +9,10 @@ import {
     Pressable
 } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import BurgerMenuItem from '../../Components/BurgerMenu/BurgerMenuItem';
 import BgView from '../../Hooks/BgView';
 import { navigate } from '../../Navigation/CostumNavigation';
+import DrawerItems from '../../Services/DrawerItems';
 
 
 
@@ -18,6 +20,7 @@ import { navigate } from '../../Navigation/CostumNavigation';
 const AuthScreen = () => {
     return (
         <BgView style={{ flex: 1 }} >
+           
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Image source={require('../../Assets/images/walker-img.png')} style={{ width: 201, height: 35, marginBottom: 50 }} />
                 <TouchableOpacity
