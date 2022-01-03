@@ -14,8 +14,8 @@ import BurgerMenuItem from './BurgerMenuItem';
 
 const BurgerMenu = () => {
     return (
-        <SafeAreaView>
-            <ScrollView contentContainerStyle={{ marginVertical: '10%', paddingLeft: '8%' }}>
+        <SafeAreaView style={{flex: 1, padding: '8%'}}>
+            <ScrollView contentContainerStyle={{ marginVertical: '10%',  }}>
             {DrawerItems.map(item => (
                 <BurgerMenuItem element={item} key={item.name}/>
             ))}
@@ -33,9 +33,8 @@ const BurgerMenu = () => {
 
 const styles = StyleSheet.create({
     authBtn: {
-        marginHorizontal: 20,
-        marginVertical: 10,
-        width: 320,
+        marginVertical: 20,
+        width: '100%',
         height: 56,
         borderRadius: 10,
         backgroundColor: '#B38AEA',

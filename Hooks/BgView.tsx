@@ -2,7 +2,8 @@ import React from 'react';
 import { 
     ImageBackground, 
     SafeAreaView,
-    StyleSheet 
+    StyleSheet, 
+    View
 } from 'react-native';
 
 const bg_image = require('../Assets/images/walker-bg.png');
@@ -12,7 +13,10 @@ const BgView = ({children}: any) => {
     return (
         <SafeAreaView style={styles.container}>
             <ImageBackground source={bg_image} resizeMode="cover" style={styles.image}>
+                <View style={{flex: 1, }}>
                 {children}
+                </View>
+                
             </ImageBackground>
         </SafeAreaView>
     );
@@ -21,7 +25,7 @@ const BgView = ({children}: any) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "center"
+        
     },
     image: {
         flex: 1,

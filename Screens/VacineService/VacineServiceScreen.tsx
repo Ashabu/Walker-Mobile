@@ -1,13 +1,15 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import App from '../../App';
+import AppLayout from '../../Components/AppLayout/AppLayout';
 
 const VacineServiceScreen = () => {
     return (
-        <View>
+        <AppLayout>
             <Text>
                 ვაქცინის ჯავშნის გვერდი
             </Text>
-        </View>
+        </AppLayout>
     );
 };
 

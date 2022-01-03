@@ -11,11 +11,11 @@ import AppHeader from '../AppHeader/AppHeader';
 
 const AppLayout: React.FC = (props) => (
     <AppDrawerNavigator >
-        <>
+        < >
             <AppHeader />
-            <BgView>
+            <View >
                 {props.children}
-            </BgView>
+            </View>
         </>
     </AppDrawerNavigator>)
 

@@ -3,14 +3,15 @@ import {
     Text,
     View
 } from 'react-native';
+import AppLayout from '../../Components/AppLayout/AppLayout';
 
 const ProfileScreen = () => {
     return (
-        <View>
+        <AppLayout>
             <Text>
                 პროფილის გვერდი
             </Text>
-        </View>
+        </AppLayout>
     );
 };
 

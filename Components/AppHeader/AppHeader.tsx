@@ -10,7 +10,7 @@ import { toggleDrawer } from '../../Navigation/CostumNavigation';
 
 const AppHeader = () => {
     return (
-        <View style={{width: '100%', height: 60}}>
+        <View style={{width: '100%', height: 60,  justifyContent: 'center', padding: 10}}>
             <TouchableOpacity style={styles.burgerIcon} onPress={() => toggleDrawer()}>
                 <View style={styles.burgerIconLine} />
                 <View style={styles.burgerIconLine} />

@@ -11,9 +11,7 @@ import AppLayout from '../../Components/AppLayout/AppLayout';
 const HomePageScreen = () => {
     return (
         <AppLayout>
-            <ScrollView>
                 <Text>მთავარი გვერდი</Text>
-            </ScrollView>
         </AppLayout>
     );
 };
