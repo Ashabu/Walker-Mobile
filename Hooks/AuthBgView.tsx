@@ -2,21 +2,27 @@ import React from 'react';
 import { 
     ImageBackground, 
     SafeAreaView,
-    StyleSheet 
+    StyleSheet, 
+    View
 } from 'react-native';
+import AppDrawerNavigator from '../Navigation/Drawernavigation';
+
 
 const bg_image = require('../Assets/images/walker-bg.png');
 
 
-const BgView = ({children}: any) => {
-    return (
-        <SafeAreaView style={styles.container}>
+const AuthBgView = ({children}: any) => (
+    <AppDrawerNavigator>
+        <>
+        <View style={styles.container}>
             <ImageBackground source={bg_image} resizeMode="cover" style={styles.image}>
                 {children}
             </ImageBackground>
-        </SafeAreaView>
+        </View>
+        </>
+        </AppDrawerNavigator>
     );
-};
+
 
 const styles = StyleSheet.create({
     container: {
@@ -30,4 +36,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default BgView;
+export default AuthBgView;

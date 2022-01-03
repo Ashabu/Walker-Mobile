@@ -8,14 +8,16 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import AuthScreen from './Screens/AuthScreen';
+import AppStack from './Navigation/StackNavigation';
+import AuthScreen from './Screens/Authorization/AuthScreen';
+AppStack
 
 
 
 const App = () => {
 
   return (
-    <AuthScreen/>
+    <AppStack/>
   );
 };
 
